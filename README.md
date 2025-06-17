@@ -3,7 +3,7 @@
 ## Giới thiệu
 
 Đây là một hệ thống **chữ ký số đơn giản** dùng RSA, được chia thành 3 ứng dụng riêng biệt nhưng liên kết:
-- `auth-server`: đăng ký / đăng nhập, sinh cặp khóa RSA.
+- `auth-server`: đăng ký, sinh cặp khóa RSA.
 - `signer-app`: người dùng đăng nhập và ký số file gửi cho người khác.
 - `verifier-app`: xác minh chữ ký và nội dung file đã ký.
 
