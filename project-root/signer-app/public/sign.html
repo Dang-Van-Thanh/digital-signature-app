@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Ký số</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <h2>Ký số tệp tin</h2>
+  <form action="/sign" method="post" enctype="multipart/form-data">
+    <label>Tên người dùng:</label>
+    <input type="text" name="username" id="usernameField" required><br>
+
+    <label>Chọn người nhận:</label>
+    <input type="text" name="recipient" required><br>
+
+    <label>Chọn tệp:</label>
+    <input type="file" name="file" required><br>
+
+    <button type="submit">Ký và gửi</button>
+  </form>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const username = params.get("username");
+    if (username) {
+      document.getElementById("usernameField").value = username;
+    }
+  </script>
+</body>
+</html>
